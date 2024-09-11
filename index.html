@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <h1>My Images</h1>
+    <ul id="images">
+        <li><img src="photo1.png" width="200px" id="bootcamp" alt="This is Photo" onclick="alert('Dont touch')"></li>
+        <li><img src="photo2.png" width="200px" id="linkedList" alt="This is Photo"></li>
+    </ul>
+</body>
+<script>
+    document.querySelector("#images").addEventListener("click",function(e){
+       console.log("Clicked inside ul");
+    },true)
+      
+    document.querySelector("#linkedList").addEventListener("click",function(e){
+       e.target.parentNode.remove();
+    },true)
+
+    
+</script>
+</html>
